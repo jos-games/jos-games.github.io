@@ -40,6 +40,8 @@ jobs:
         run: npm ci
       - name: Run build
         run: npm run build
+      - name: Verify build output
+        run: ls -la dist/ || ls -la out/ || ls -la build/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
