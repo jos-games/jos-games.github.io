@@ -1,7 +1,20 @@
 import Image from "next/image";
 import "../globals.css";
+import {useState} from "react";
 
-export default function Login() {
+export default function Login({ validPasswords, onValidPassword }) {
+
+  const [attempt, setAttempt] = useState("");
+  const [isAttemptWrong, setIsAttemptWrong] = useState(false);
+
+  const tryAttempt = () => {
+    if(validPasswords.some(validPassword => validPassword === attempt)) {
+      onValidPassword(attempt);
+    } else {
+      setIsAttemptWrong(true);
+    }
+  }
+
   return (
     <div className="flex items-center justify-center min-h-screen py-8 -mt-24">
       <div className={"flex flex-col gap-12"}>
@@ -30,15 +43,26 @@ export default function Login() {
               height={25}
               priority
             />
-            <input className={"flex-1 outline-none"} placeholder={""} />
+            <input className={"flex-1 outline-none"}
+              value={attempt}
+              onChange={e => setAttempt(e.target.value.toLowerCase())}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter') {
+                  e.preventDefault();
+                  tryAttempt();
+                }
+              }}
+            />
             <button>
               <Image src="/circle-next.png"
                      alt={"proceed"}
                      width={25}
                      height={25}
+                     onClick={tryAttempt}
               />
             </button>
           </div>
+          { isAttemptWrong ? <p className={"text-red-500"}>Invalid Password</p> : <></> }
         </div>
       </div>
     </div>

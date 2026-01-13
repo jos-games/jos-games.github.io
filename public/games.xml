@@ -1,7 +1,7 @@
 <games>
     <game>
         <title>sample game 1</title>
-        <password>sample1</password>
+        <password>password1</password>
         <questions>
             <question>
                 <prompt>who is your mother?</prompt>
@@ -17,7 +17,7 @@
     </game>
     <game>
         <title>sample game 2</title>
-        <password>sample2</password>
+        <password>password2</password>
         <questions>
             <question>
                 <prompt>who is your father?</prompt>
@@ -28,6 +28,22 @@
                 <prompt>what do you do at his house?</prompt>
                 <answer>cook him dinner</answer>
                 <reward>go to sleep</reward>
+            </question>
+        </questions>
+    </game>
+    <game>
+        <title>sample game</title>
+        <password>password</password>
+        <questions>
+            <question>
+                <prompt>The answer is abcd</prompt>
+                <answer>abcd</answer>
+                <reward>this will tell you where to go / hint</reward>
+            </question>
+            <question>
+                <prompt>answer is qwerty</prompt>
+                <answer>qwert</answer>
+                <reward>this will tell you where to go / hint</reward>
             </question>
         </questions>
     </game>
