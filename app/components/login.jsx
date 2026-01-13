@@ -25,7 +25,7 @@ export default function Login() {
           <div className="relative flex gap-2 w-full max-w-md bg-zinc-600 p-2 rounded-full">
             <Image
               src="/key.png"
-              alt="Next.js logo"
+              alt="Key"
               width={25}
               height={25}
               priority
@@ -33,6 +33,7 @@ export default function Login() {
             <input className={"flex-1 outline-none"} placeholder={""} />
             <button>
               <Image src="/circle-next.png"
+                     alt={"proceed"}
                      width={25}
                      height={25}
               />
