@@ -49,6 +49,7 @@ export default function Question({ question, onNextQuestion }) {
                   alt="question mark"
                   width={25}
                   height={25}
+                  className={"max-w-[25px] max-h-[25px]"}
                   priority
                 />
                 <input className={"flex-1 outline-none"}
@@ -88,13 +89,14 @@ export default function Question({ question, onNextQuestion }) {
             </div>
             <div className={"text-left flex flex-col gap-6"}>
               <p>Reward</p>
-              <div className="relative flex gap-2 w-full max-w-md bg-zinc-600 p-2 rounded-full">
+              <div className="items-center relative flex gap-2 w-full max-w-md bg-zinc-600 p-2 rounded-full">
                 <Image
                   src="/unlock.png"
                   alt="unlock"
                   width={25}
                   height={25}
                   priority
+                  className={"max-w-[25px] max-h-[25px]"}
                 />
                 <p className={"flex-1"}>{question["reward"].toUpperCase()}</p>
                 <button>
