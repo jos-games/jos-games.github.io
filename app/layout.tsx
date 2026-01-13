@@ -13,7 +13,7 @@ icons: {
 };
 
 const robotoMono = Roboto_Mono({
-  subsets: ['monospace'],
+  subsets: ['latin'],
   weight: ['300', '500', '700'],
   variable: '--font-roboto-mono',
   display: 'swap',
