@@ -1,0 +1,34 @@
+<games>
+    <game>
+        <title>sample game 1</title>
+        <password>sample1</password>
+        <questions>
+            <question>
+                <prompt>who is your mother?</prompt>
+                <answer>lily li</answer>
+                <reward>go to her house</reward>
+            </question>
+            <question>
+                <prompt>what do you do at her house?</prompt>
+                <answer>cook her dinner</answer>
+                <reward>go to sleep</reward>
+            </question>
+        </questions>
+    </game>
+    <game>
+        <title>sample game 2</title>
+        <password>sample2</password>
+        <questions>
+            <question>
+                <prompt>who is your father?</prompt>
+                <answer>bobo loh</answer>
+                <reward>go to his house</reward>
+            </question>
+            <question>
+                <prompt>what do you do at his house?</prompt>
+                <answer>cook him dinner</answer>
+                <reward>go to sleep</reward>
+            </question>
+        </questions>
+    </game>
+</games>
