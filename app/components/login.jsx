@@ -30,7 +30,7 @@ export default function Login() {
               height={25}
               priority
             />
-            <input className={"outline-none"} placeholder={"TEST"} />
+            <input className={"flex-1 outline-none"} placeholder={""} />
             <button>
               <Image src="/circle-next.png"
                      width={25}
