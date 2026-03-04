@@ -2,7 +2,7 @@ import "../globals.css";
 import Image from "next/image";
 import {useState} from "react";
 
-export default function Question({ question, onNextQuestion }) {
+export default function Question({ question }) {
 
   const [attempt, setAttempt] = useState("");
   const [isAttemptWrong, setIsAttemptWrong] = useState(false);
@@ -10,18 +10,11 @@ export default function Question({ question, onNextQuestion }) {
 
   const tryAttempt = () => {
     console.log("try attempt");
-    if(question["answer"] === attempt.toLowerCase()) {
+    if(question["answer"].toLowerCase().replace(/\s/g, '') === attempt.toLowerCase().replace(/\s/g, '')) {
       setIsQuestionCleared(true);
     } else {
       setIsAttemptWrong(true);
     }
-  }
-
-  const goNext = () => {
-    setIsAttemptWrong(false);
-    setIsQuestionCleared(false);
-    setAttempt("");
-    onNextQuestion();
   }
 
   return (
@@ -88,26 +81,16 @@ export default function Question({ question, onNextQuestion }) {
               </div>
             </div>
             <div className={"text-left flex flex-col gap-6"}>
-              <p>Reward</p>
-              <div className="items-center relative flex gap-2 w-full max-w-md bg-zinc-600 p-2 rounded-full">
-                <Image
-                  src="/unlock.png"
-                  alt="unlock"
-                  width={25}
-                  height={25}
-                  priority
-                  className={"max-w-[25px] max-h-[25px]"}
-                />
-                <p className={"flex-1"}>{question["reward"].toUpperCase()}</p>
-                <button>
-                  <Image src="/circle-next.png"
-                         alt={"proceed"}
-                         width={25}
-                         height={25}
-                         onClick={goNext}
-                  />
-                </button>
-              </div>
+              {
+                question["reward"].split("\\n").map((item, idx) => {
+                  return (
+                    <span key={idx}>
+                      {item}
+                      <br/>
+                    </span>
+                  )
+                })
+              }
             </div>
           </>
         }

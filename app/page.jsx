@@ -1,7 +1,7 @@
 'use client';
 
 import './font.css';
-import Login from './components/login'
+import BadGameKey from './components/badGameKey'
 import LoadingSpinner from "./components/loading";
 import {useEffect, useState} from "react";
 import {XMLParser} from "fast-xml-parser";
@@ -13,9 +13,6 @@ export default function Home() {
   const [isLoadingGames, setIsLoadingGames] = useState(true);
 
   const [selectedGame, setSelectedGame] = useState(null);
-  const [currentQuestionIdx, setCurrentQuestionIdx] = useState(0);
-
-  const [isGameCompleted, setIsGameCompleted] = useState(false);
 
   useEffect(() => {
     fetch('/games.xml')
@@ -25,31 +22,25 @@ export default function Home() {
         const games = parser.parse(xml);
         setGames(games["games"]["game"].map(game => ({
           title: game["title"],
-          password: game["password"].toLowerCase(),
-          questions: game["questions"]["question"].map(question => ({
-            prompt: question["prompt"],
-            answer: question["answer"].toLowerCase(),
-            reward: question["reward"],
-          }))
+          key: game["key"].toLowerCase(),
+          question: game["question"]
         })));
       })
   }, []);
 
   useEffect(() => {
+    console.log(selectedGame)}, [selectedGame]);
+
+  useEffect(() => {
     if(games != null) {
-      console.log("game xml load success!");
-      console.log(games);
+      const gameKeyParam = new URLSearchParams(window.location.search).get('gameKey');
+      if(games.map(game => game["key"]).some(validPassword => validPassword === gameKeyParam)) {
+        console.log("game key is valid");
+        setSelectedGame(games.filter(game => game["key"] === gameKeyParam)[0])
+      }
       setIsLoadingGames(false);
     }
-  }, [games]);
-
-  const handleValidPassword = (password) => {
-    const matchingGame = games.filter(game => game["password"] === password)[0];
-    console.log("matching game:", matchingGame);
-    setSelectedGame(matchingGame);
-  }
-
-  const handleNextQuestion = () => {setCurrentQuestionIdx(currentQuestionIdx + 1)};
+  }, [games])
 
   return (
     <div className="flex flex-col min-h-screen min-h-[100dvh] items-center justify-center">
@@ -58,10 +49,8 @@ export default function Home() {
           { isLoadingGames ?
             <LoadingSpinner /> :
               selectedGame == null ?
-                <Login validPasswords={games.map(game => game["password"])} onValidPassword={handleValidPassword}/> :
-                currentQuestionIdx === selectedGame["questions"].length ?
-                  <p>END OF GAME</p> :
-                  <Question question={selectedGame["questions"][currentQuestionIdx]} onNextQuestion={handleNextQuestion} />
+                <BadGameKey /> :
+                <Question question={selectedGame["question"]} />
           }
         </div>
       </main>

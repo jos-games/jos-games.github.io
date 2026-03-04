@@ -1,50 +1,38 @@
 <games>
     <game>
         <title>sample game 1</title>
-        <password>password1</password>
-        <questions>
-            <question>
-                <prompt>who is your mother?</prompt>
-                <answer>lily li</answer>
-                <reward>go to her house</reward>
-            </question>
-            <question>
-                <prompt>what do you do at her house?</prompt>
-                <answer>cook her dinner</answer>
-                <reward>go to sleep</reward>
-            </question>
-        </questions>
+        <key>melb01</key>
+        <question>
+            <prompt>From Flinders St Station, where did Clara go?</prompt>
+            <answer>Hamer Hall</answer>
+            <reward>Clara headed over to Hamer Hall (Formerly known as Melbourne Concert Hall) to watch the Gala Concert.\nMake your way over to the entrance of Hamer Hall and open Envelope B</reward>
+        </question>
     </game>
     <game>
         <title>sample game 2</title>
-        <password>password2</password>
-        <questions>
-            <question>
-                <prompt>who is your father?</prompt>
-                <answer>bobo loh</answer>
-                <reward>go to his house</reward>
-            </question>
-            <question>
-                <prompt>what do you do at his house?</prompt>
-                <answer>cook him dinner</answer>
-                <reward>go to sleep</reward>
-            </question>
-        </questions>
+        <key>melb02</key>
+        <question>
+            <prompt>From Hamer Hall, where did Clara go?</prompt>
+            <answer>St Paul</answer>
+            <reward>After the performance Clara headed to St Paul's Cathedral\nMake your way to the front of St Paul's Cathedral and open Envelope C</reward>
+        </question>
     </game>
     <game>
         <title>sample game</title>
-        <password>password</password>
-        <questions>
-            <question>
-                <prompt>The answer is abcd</prompt>
-                <answer>abcd</answer>
-                <reward>this will tell you where to go / hint</reward>
-            </question>
-            <question>
-                <prompt>answer is qwerty</prompt>
-                <answer>qwert</answer>
-                <reward>this will tell you where to go / hint</reward>
-            </question>
-        </questions>
+        <key>melb03</key>
+        <question>
+            <prompt>After visiting Batman Park, where did Clara head to next?</prompt>
+            <answer>Spencer</answer>
+            <reward>From her tram ticket, you found out that she got on the Tram at Flinders St and got off 20 minutes later at Spencer which is where Batman Park currently is.\nFrom Swanston St/Flinders St take Tram number 70 or 75, getting off at Spencer St/Flinders St. You will find yourself right beside Batman Park. Once you have arrived, open Envelope C.</reward>
+        </question>
+    </game>
+    <game>
+        <title>sample game</title>
+        <key>melb04</key>
+        <question>
+            <prompt>According to eyewitnesses, Clara seemed to be in a rush. Where did Clara go after?</prompt>
+            <answer>Albert Park</answer>
+            <reward>Clara headed south in a rush towards Albert Park Lake, we suspect she was meeting someone there, but who could it be? Head there and uncover the truth.\nFrom Batman/Spencer St, take Tram 96 to Melbourne Sports & Aquatic Centre and walk 10min towards 22 Aughtie Dr, Albert Park.\nAlternatively, take a cab to 22 Aughtie Dr, Albert Park VIC 3205, Australia.\nOnce there walk along the Lake heading South till you find a bench with a wooden Chest and you will have found Clara's end location.</reward>
+        </question>
     </game>
 </games>
