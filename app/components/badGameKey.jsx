@@ -15,12 +15,12 @@ export default function BadGameKey() {
             priority
           />
           <div className="w-fit mx-auto">
-            <h1 className="roboto-mono-bold text-4xl text-left">Hold Up!</h1>
+            <h1 className="roboto-mono-bold text-4xl text-left">ERROR!</h1>
           </div>
         </div>
         <div className={"flex flex-col gap-6"}>
           <p className={"truncate text-[clamp(1rem,4vw,3rem)]"}>
-            Enter your Game Key to Begin
+            Please verify your game key
             <span className="ellipsis-anim"><span>.</span><span>.</span><span>.</span></span>
           </p>
         </div>
