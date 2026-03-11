@@ -21,7 +21,7 @@
         <title>sample game</title>
         <key>melb03</key>
         <question>
-            <prompt>After visiting Batman Park, where did Clara head to next?</prompt>
+            <prompt>After St Paul's Cathedral, where did Clara head to next?</prompt>
             <answer>Spencer</answer>
             <reward>From her tram ticket, you found out that she got on the Tram at Flinders St and got off 20 minutes later at Spencer which is where Batman Park currently is.\nFrom Swanston St/Flinders St take Tram number 70 or 75, getting off at Spencer St/Flinders St. You will find yourself right beside Batman Park. Once you have arrived, open Envelope C.</reward>
         </question>
@@ -32,7 +32,7 @@
         <question>
             <prompt>According to eyewitnesses, Clara seemed to be in a rush. Where did Clara go after?</prompt>
             <answer>Albert Park</answer>
-            <reward>Clara headed south in a rush towards Albert Park Lake, we suspect she was meeting someone there, but who could it be? Head there and uncover the truth.\nFrom Batman/Spencer St, take Tram 96 to Melbourne Sports & Aquatic Centre and walk 10min towards 22 Aughtie Dr, Albert Park.\nAlternatively, take a cab to 22 Aughtie Dr, Albert Park VIC 3205, Australia.\nOnce there walk along the Lake heading South till you find a bench with a wooden Chest and you will have found Clara's end location.</reward>
+            <reward>Clara headed south in a rush towards Albert Park Lake, we suspect she was meeting someone there, but who could it be? Head there and uncover the truth.\nFrom Batman/Spencer St, take Tram 96 to Melbourne Sports & Aquatic Centre and walk 10min towards 22 Aughtie Dr, Albert Park. \nAlternatively, take an uber to 22 Aughtie Dr, Albert Park VIC 3205, Australia. \nOnce there, while facing Carousel, turn left and walk towards the lake. You will find a bench with a wooden Chest and you will have found Clara's final location.</reward>
         </question>
     </game>
 </games>
