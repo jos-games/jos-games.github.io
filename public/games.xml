@@ -4,7 +4,7 @@
         <key>melb01</key>
         <question>
             <prompt>From Flinders St Station, where did Clara go?</prompt>
-            <answer>Hamer Hall</answer>
+            <answer>Melbourne Concert Hall</answer>
             <reward>Clara headed over to Hamer Hall (Formerly known as Melbourne Concert Hall) to watch the Gala Concert.\nMake your way over to the entrance of Hamer Hall and open Envelope B</reward>
         </question>
     </game>
@@ -31,7 +31,7 @@
         <key>melb04</key>
         <question>
             <prompt>According to eyewitnesses, Clara seemed to be in a rush. Where did Clara go after?</prompt>
-            <answer>Albert Park</answer>
+            <answer>Albert Park Lake</answer>
             <reward>Clara headed south in a rush towards Albert Park Lake, we suspect she was meeting someone there, but who could it be? Head there and uncover the truth.\nFrom Batman/Spencer St, take Tram 96 to Melbourne Sports & Aquatic Centre and walk 10min towards 22 Aughtie Dr, Albert Park. \nAlternatively, take an uber to 22 Aughtie Dr, Albert Park VIC 3205, Australia. \nOnce there, while facing Carousel, turn left and walk towards the lake. You will find a bench with a wooden Chest and you will have found Clara's final location.</reward>
         </question>
     </game>
